@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock paper scissors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">
+        ☀
+    </button>
+
+    <p class="title">Rock paper scissors</p>
+    <div class="buttons-container">
+        <button onclick="playerMove = 'Rock'; playGame(playerMove);" class="move-button">
+            <img src="images/rock-emoji.png" alt="" class="move-icon">
+        </button>
+
+        <button onclick="playerMove = 'Paper'; playGame(playerMove);" class="move-button">
+            <img src="images/paper-emoji.png" alt="" class="move-icon">
+        </button>
+
+        <button onclick="playerMove = 'Scissors'; playGame(playerMove);" class="move-button">
+            <img src="images/scissors-emoji.png" alt="" class="move-icon">
+        </button>
+    </div>
+
+    <p class="js-result result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score score"></p>
+
+    <button onclick="
+        score.won = 0;
+        score.lost = 0;
+        score.tie = 0;
+        
+        localStorage.removeItem('score');updateScoreElement();
+        
+    " class="reset-score-button">Reset Score
+    </button>
+
+    <div style="width: 90%;margin: 30px auto;" >
+        <img width="30%" src="images/VIT-AP NEW LOGO PNG FORMAT.png" alt="VIT-AP LOGO">
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
